@@ -1,0 +1,76 @@
+/* Stiluri pentru meniu */
+html, body {
+  /* ma asigur ca html si body ocupa intregul ecran. */
+  height: 100%;
+  /*elimin marginile implicite*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('/static/images/fundal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; /* Previn repetarea imaginii */
+  background-position: center center; /* Centrez imaginea */
+  background-attachment: fixed;
+}
+.navbar {
+  background-color: #ffb27a; /* Culoarea de fundal pentru meniu */
+  padding: 15px; /* spatierea între conținut si marginea meniului */
+  position: relative; /* asigur poziționarea relativă pentru a putea poziționa logo-ul absolut */
+}
+
+.navbar-brand {
+  color: rgb(233, 101, 101); /* culoarea pentru textul din meniu */
+  font-size: 40px; /* dimensiunea fontului */
+  font-weight: bold; /* Grosimea fontului */
+}
+
+.navbar-nav {
+  list-style-type: none; /* elimin marcarea listei pentru elementele de meniu */
+  padding:15px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white; /* culoarea textului pentru linkuri */
+  font-size: 28px; /* dimensiunea fontului */
+  text-decoration: none; /* elimin sublinierea linkului */
+}
+
+.nav-link:hover {
+  color: #37444ba2; /* Culoarea textului la hover pentru linkuri */
+}
+/* Stilul pentru logo */
+.logo {
+  width: 35vh;
+  margin-left: 200%;
+}
+
+/*pentru pagina de about.*/
+.about {
+  background-color:#aebcc3;
+  padding:25px;
+  border-radius:20px;
+  border-color:rgb(254, 218, 163);
+  border-width:9px;
+  border-style:outset;
+}
+.about_big_p {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+.about_par{
+  font-size:20px;
+  background-color:#ffdac0;
+  padding:10px;
+  border-radius:10px;
+}
+
+.poza {
+  /* pentru a imi afisa in home la dimenisunea dorita. */
+  width: 10px;
+}

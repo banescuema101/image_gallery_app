@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Uploaded Photos</h1>
+{% for category, photos in categorized_photos.items() %}
+    <h2>{{ category }}</h2>
+    <div class="photo-gallery row">
+        {% for photo in photos %}
+            <div class="col-md-3">
+                <div class="photo">
+                    <a href="{{ photo.url }}" target="_blank">
+                        <img class="img-fluid" src="{{ photo.thumbnail }}" alt="{{ photo.name }}">
+                    </a>
+                    <p>{{ photo.name }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+{% endblock %}
