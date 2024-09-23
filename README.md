@@ -26,17 +26,26 @@ Images are sorted into categories for easier browsing (e.g., Nature, City, Peopl
 
 ## Main Technologies Used
 Flask: Backend framework for handling requests and sessions.
-Jinja Template Engine: Used to extend a base template and to interact with data structures like lists and dictionaries from the flask server.
-PIL (Pillow): Used for image processing and thumbnail creation.
-HTML/CSS: Frontend for rendering pages and galleries.
-Flask Sessions: To handle user authentication and login sessions.
-Flask render_template: Used to rendering HTML templates.
-Flask request: Used to handle incoming data (from login and upload forms)
-Flask send_from_directory: For serving files from a specific directory.
-Flask flash: For displaying temporary messages to users.
-Flask redirect & url_for:  To navigate users to a specific route by calling a function associated with that route, respectively URL generation within the application.
-Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
 
+Jinja Template Engine: Used to extend a base template and to interact with data structures like lists and dictionaries from the flask server.
+
+PIL (Pillow): Used for image processing and thumbnail creation.
+
+HTML/CSS: Frontend for rendering pages and galleries.
+
+Flask Sessions: To handle user authentication and login sessions.
+
+Flask render_template: Used to rendering HTML templates.
+
+Flask request: Used to handle incoming data (from login and upload forms)
+
+Flask send_from_directory: For serving files from a specific directory.
+
+Flask flash: For displaying temporary messages to users.
+
+Flask redirect & url_for:  To navigate users to a specific route by calling a function associated with that route, respectively URL generation within the application.
+
+Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
 
 # The server allows users to upload images, choose from various common categories for their photos, and view them in a gallery, regardless of whether they are authenticated or not. The application manages user authentication, image uploads, and the generation of thumbnails for these images.
 
