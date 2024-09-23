@@ -29,7 +29,7 @@ def create_thumbnail(image_path, thumbnail_path):
         img.thumbnail((200, 200))
         img.save(thumbnail_path)
 
-# adaug cateva imagini pentru demo
+# adaug cateva imagini pentru demo, fiecare poza fiind vazuta ca un dictionar (key:value)
 sample_photos = [
     {
         "url": "/uploads/astronaut.png",
@@ -57,13 +57,16 @@ photos.extend(sample_photos)
 @app.route('/')
 def public_gallery():
     # afisez galeria publica
-    # arganizez pozele pe categorii
-    categorized_photos = {category: [] for category in categories}
+    # acest dictionar cu poze + categorii va arata cam asa:
+    # categorized_photos = {
+    #     "Nature" : [],
+    #     "People": [],
+    #     "City": []
+    # }
+    categorized_photos = {category : [] for category in categories}
     for photo in photos:
-        # adaug pozele in categoriile respective pentru a le afisa ulterior
-        categorized_photos[photo["category"]].append(photo)
-    # Randez pagina de home cu poze, index.html
-    return render_template('index.html', categorized_photos=categorized_photos)
+        categorized_photos[photo['category']].append(photo)
+    return render_template("index.html", categorized_photos = categorized_photos)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -105,13 +108,13 @@ def upload():
         # Daca se doreste a afisa o poza incarcata,
         # preiau imaginea din formular, numele si categoria
         image = request.files['image']
-        name = request.form.get('name')
-        category = request.form.get('category')
+        name = request.form['name']
+        category = request.form['category']
         # Setez calea pentru salvarea imaginii si o salvez in fisierul de upload.
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], image.filename)
         image.save(image_path)
 
-        # creez si salvez thumbnail-ul
+        # creez si salvez thumbnail-ul si il denumesc corespunzator nume_img.extensie !!
         thumbnail_name = f"{os.path.splitext(image.filename)[0]}.thumb{os.path.splitext(image.filename)[1]}"
         # concatenez folderul de thumbnail-uri și numele de fișier al thumbnail-ului ca sa creez calea completă a fișierului.
         thumbnail_path = os.path.join(app.config['THUMBNAIL_FOLDER'], thumbnail_name)
@@ -120,7 +123,7 @@ def upload():
 
         # adaug informatiile imaginii in lista de poze
         photos.append({
-            "url": f"/uploads/{image.filename}",  # url-ul imaginii uploadate
+             "url": f"/uploads/{image.filename}",  # url-ul imaginii uploadate
             "thumbnail": f"/thumbnails/{thumbnail_name}",  # url-ul thumbnail-ului
             "name": name,  # numele imaginii
             "category": category,  # categoria imaginii
