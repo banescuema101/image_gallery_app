@@ -1,17 +1,26 @@
-FROM alpine:edge
+FROM python:3.9-slim
 
-RUN apk add --update py3-pip
-# Creez mediul virtual
-RUN python3 -m venv /venv
+# Setez directorul de lucru în container
+WORKDIR /usr/src/app
 
-# setez variabila de mediu PATH
-ENV PATH="/venv/bin:$PATH"
+# instalarea dependențelor
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+# Copiez codul aplicației (doar pentru build-ul inițial, codul va fi montat mai jos)
+COPY . .
 
-# copiez fisierele, directoarele necesare /usr/src/app/ din container.
-ADD ${PWD}/ /usr/src/app
+# Expun portul pe care Flask rulează implicit
 EXPOSE 5000
-# comanda care va fi executata când containerul este pornit
-CMD ["python3", "/usr/src/app/app.py"]
+
+# Setez variabila de mediu pentru Flask
+ENV FLASK_ENV=development
+
+# Comandă pentru a porni serverul Flask
+CMD ["flask", "run", "--host=0.0.0.0"]
+
+
+# For start the server use the following comands:
+  
+# docker compose build
+# docker compose up
