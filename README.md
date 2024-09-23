@@ -48,9 +48,9 @@ Flask redirect & url_for:  To navigate users to a specific route by calling a fu
 Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
 
 ## To start the application, you need to have Docker installed on your computer. Then, you can run the following commands:
-# docker-compose build - This builds the images defined in your docker-compose.yml file.
+.............docker-compose build.............. - This builds the images defined in your docker-compose.yml file.
 
-# docker-compose up - This starts the containers based on the built images.
+.............docker-compose up................. - This starts the containers based on the built images.
 
 # The server allows users to upload images, choose from various common categories for their photos, and view them in a gallery, regardless of whether they are authenticated or not. The application manages user authentication, image uploads, and the generation of thumbnails for these images.
 
