@@ -1,6 +1,6 @@
 ## Project Description
 
-# This project is a mini image gallery built using Flask. It allows users to view a public gallery of images, while authenticated users can upload images to a private gallery. Each uploaded image automatically generates a thumbnail, and the images are organized into predefined categories such as Nature, City, and People.
+# This project is a mini image gallery built using Flask, together with HTML, CSS, Pyhton and Dockerfile that include all the necessary dependencies for the application, ensuring it runs consistently across different systems. It allows users to view a public gallery of images, while authenticated users can upload images to a private gallery. Each uploaded image automatically generates a thumbnail, and the images are organized into predefined categories such as Nature, City, and People.
 
 ## Features:
 
@@ -46,6 +46,11 @@ Flask flash: For displaying temporary messages to users.
 Flask redirect & url_for:  To navigate users to a specific route by calling a function associated with that route, respectively URL generation within the application.
 
 Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
+
+## To start the application, you need to have Docker installed on your computer. Then, you can run the following commands:
+# docker-compose build - This builds the images defined in your docker-compose.yml file.
+
+# docker-compose up - This starts the containers based on the built images.
 
 # The server allows users to upload images, choose from various common categories for their photos, and view them in a gallery, regardless of whether they are authenticated or not. The application manages user authentication, image uploads, and the generation of thumbnails for these images.
 
