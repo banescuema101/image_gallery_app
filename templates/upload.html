@@ -3,6 +3,7 @@
 {% block content %}
 <h1>Upload Photo</h1>
 
+<!-- Display all flashed messages we have. -->
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     <ul class="flashes">
