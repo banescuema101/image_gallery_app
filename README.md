@@ -6,7 +6,7 @@
 
 # User Authentication: (/login)
 Only authenticated users can access private features like uploading images.
-### IMPORTANT!
+## IMPORTANT!
 For login, the username in ema and the password is ema123.
 
 # Public Gallery (/)
