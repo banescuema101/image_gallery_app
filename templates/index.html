@@ -2,10 +2,11 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <h1>Uploaded Photos</h1>
-{% for category, photos in categorized_photos.items() %}
+<!-- Iterez prin dictionarul categorized_photos pe care mi l-a transmis aplicatia flask-->
+{% for category, photos_afferent in categorized_photos.items() %}
     <h2>{{ category }}</h2>
     <div class="photo-gallery row">
-        {% for photo in photos %}
+        {% for photo in photos_afferent %}
             <div class="col-md-3">
                 <div class="photo">
                     <a href="{{ photo.url }}" target="_blank">
@@ -17,4 +18,6 @@
         {% endfor %}
     </div>
 {% endfor %}
+
+<script src="{{url_for('static', filename='js/script.js')}}"></script>
 {% endblock %}
