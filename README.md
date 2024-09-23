@@ -25,29 +25,29 @@ The app automatically creates and stores a thumbnail for each uploaded image to 
 Images are sorted into categories for easier browsing (e.g., Nature, City, People).
 
 ## Main Technologies Used
-# Flask: Backend framework for handling requests and sessions.
-# PIL (Pillow): Used for image processing and thumbnail creation.
-# HTML/CSS: Frontend for rendering pages and galleries.
-# Flask Sessions: To handle user authentication and login sessions.
-# Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
+Flask: Backend framework for handling requests and sessions.
+PIL (Pillow): Used for image processing and thumbnail creation.
+HTML/CSS: Frontend for rendering pages and galleries.
+Flask Sessions: To handle user authentication and login sessions.
+Flask Flash Messages: For displaying success/error messages after actions such as login or image upload.
 
 
 # The server allows users to upload images, choose from various common categories for their photos, and view them in a gallery, regardless of whether they are authenticated or not. The application manages user authentication, image uploads, and the generation of thumbnails for these images.
 
 ## Core Functionalities (Main Routes)
-# Public Gallery: The main page (/) displays all uploaded images organized by categories (Nature, City, People).
+Public Gallery: The main page (/) displays all uploaded images organized by categories (Nature, City, People).
 
-# Login: Users can authenticate using their username and password on the /login page. Authenticated users gain access to additional functionalities (such as uploading).
+Login: Users can authenticate using their username and password on the /login page. Authenticated users gain access to additional functionalities (such as uploading).
 
-# Logout: Users can log out via the /logout page.
+Logout: Users can log out via the /logout page.
 
-# Image Upload: Authenticated users can upload images on the /upload page. The images are saved on the server, and thumbnails are automatically generated.
+Image Upload: Authenticated users can upload images on the /upload page. The images are saved on the server, and thumbnails are automatically generated.
 
-# Private Gallery: Authenticated users can view a private gallery of all their uploaded images on the /private-gallery page.
+Private Gallery: Authenticated users can view a private gallery of all their uploaded images on the /private-gallery page.
 
-# About: The /about page displays information about the purpose and benefits of the site.
+About: The /about page displays information about the purpose and benefits of the site.
 
-# All implementation details, step by step, are available and visible in the comments!
+All implementation details, step by step, are available and visible in the comments!
 
 ## Short Description of HTML Files
 # base.html
