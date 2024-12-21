@@ -1,9 +1,9 @@
 # Project Description
 
 ### This project is a mini image gallery built using Flask, together with HTML, CSS, Pyhton and Dockerfile that include all the necessary dependencies for the application, ensuring it runs consistently across different systems. It allows users to view a public gallery of images, while authenticated users can upload images to a private gallery. Each uploaded image automatically generates a thumbnail, and the images are organized into predefined categories such as Nature, City, and People.
-![Image with the home page](https://github.com/banescuema101/image_gallery_app/main/home_image.png)
-![Image with the upload page](https://github.com/banescuema101/image_gallery_app/main/upload_image.png)
-![Image with the server flow](https://github.com/banescuema101/image_gallery_app/main/server_flow_image.png)
+![Image with the home page](https://github.com/banescuema101/image_gallery_app/blob/main/home_image.png)
+![Image with the upload page](https://github.com/banescuema101/image_gallery_app/blob/main/upload_image.png)
+![Image with the server flow](https://github.com/banescuema101/image_gallery_app/blob/main/server_flow_image.png)
 # Features:
 
 ## User Authentication: (/login)
